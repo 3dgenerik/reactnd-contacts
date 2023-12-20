@@ -2,6 +2,8 @@ branch-defaults:
   lesson-2-exercise-1:
     environment: reactnd-contacts-server-dev
     group_suffix: null
+  main:
+    environment: reactnd-contacts-server-dev
 deploy:
   artifact: Archive.zip
 environment-defaults:
