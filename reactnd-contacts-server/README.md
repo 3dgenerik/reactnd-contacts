@@ -1,4 +1,4 @@
-# Server for Contacts Project
+# Server for Contacts project
 
 This is a backend server for the Contacts app in-class project. This project is part of [Udacity's React Nanodegree program](https://www.udacity.com/course/react-nanodegree--nd019).
 
