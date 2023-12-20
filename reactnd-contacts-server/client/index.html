@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Does RDS work?</title>
+  </head>
+  <body>
+    <button onclick="showContacts()">Prikazi kontakte iz RDS 02</button>
+    <ul id="contacts"></div>
+  </body>
+  <script>
+    const showContacts = () => {
+      
+      fetch("http://reactnd-contacts-server-dev.us-east-1.elasticbeanstalk.com/contacts", {
+        headers: { Authorization: "whatever-you-want-04" },
+      })
+      .then(res => res.json())
+      .then((contacts) => {
+          const contactsList = document.getElementById('contacts')
+
+          contacts.forEach(contact => {
+              const listItem = document.createElement('li')
+              listItem.innerText = `Name: ${contact.name}, Email: ${contact.email}`
+              contactsList.appendChild(listItem)
+          })
+          return contacts
+      })
+    };
+  </script>
+</html>
