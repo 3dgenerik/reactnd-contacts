@@ -3,7 +3,7 @@ branch-defaults:
     environment: reactnd-contacts-server-dev
     group_suffix: null
   main:
-    environment: Reactnd-contacts-server-env
+    environment: reactnd-contacts-server-dev2
 deploy:
   artifact: Archive.zip
 environment-defaults:
