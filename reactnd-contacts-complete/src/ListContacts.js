@@ -42,7 +42,7 @@ class ListContacts extends Component {
           <input
             className='search-contacts'
             type='text'
-            placeholder='Search contacts 06'
+            placeholder='Search contacts 07'
             value={query}
             onChange={(event) => this.updateQuery(event.target.value)}
           />
