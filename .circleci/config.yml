@@ -37,7 +37,7 @@ jobs:
       - run:
           name: Backend deploy
           command: |
-            eb deploy   
+            eb --version   
       - run:
           name: Frontend deploy
           command: |
