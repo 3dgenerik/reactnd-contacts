@@ -13,6 +13,12 @@ jobs:
       - checkout
       - aws-cli/setup
       - run:
+          name: Install EB CLI
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y python3-pip
+            pip3 install awsebcli --upgrade --user
+      - run:
           name: Frontend install
           command: |
             npm run frontend:install
