@@ -24,9 +24,9 @@ jobs:
           command: |
             npm run frontend:build
       - run:
-          name: Backend build
+          name: Backend zip
           command: |
-            npm run backend:build
+            npm run backend:zip           
       - run:
           name: Frontend deploy
           command: |

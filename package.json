@@ -8,6 +8,7 @@
     "backend:install":"cd reactnd-contacts-server && npm install",
     "frontend:build":"cd reactnd-contacts-complete && npm run build",
     "backend:build":"cd reactnd-contacts-server && npm run build",
+    "backend:zip":"cd reactnd-contacts-server && npm run zip",
     "frontend:deploy":"cd reactnd-contacts-complete && npm run deploy"
   },
   "author": "",
