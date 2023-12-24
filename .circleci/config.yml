@@ -1,6 +1,8 @@
 version: 2.1
 orbs:
   node: circleci/node@4.1.0
+  eb: circleci/aws-elastic-beanstalk@2.0.1
+  aws-cli: circleci/aws-cli@4.1.2
 jobs:
   build:
     docker:
@@ -8,6 +10,7 @@ jobs:
     steps:
       - node/install
       - checkout
+      - aws-cli/setup
       - run:
           name: Frontend install
           command: |
@@ -24,5 +27,8 @@ jobs:
           name: Backend build
           command: |
             npm run backend:build
-
+      - run:
+          name: Frontend deploy
+          command: |
+            npm run frontend:deploy
 
