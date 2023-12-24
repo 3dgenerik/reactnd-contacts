@@ -9,8 +9,20 @@ jobs:
       - node/install
       - checkout
       - run:
-          name: hello
+          name: Frontend install
           command: |
-            echo "Zdravo Mire!"
+            npm run frontend:install
+      - run:
+          name: Backend install
+          command: |
+            npm run backend:install
+      - run:
+          name: Frontend build
+          command: |
+            npm run frontend:build
+      - run:
+          name: Backend build
+          command: |
+            npm run backend:build
 
 
