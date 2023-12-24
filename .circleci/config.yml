@@ -41,11 +41,11 @@ jobs:
       - run:
           name: Use env
           command: |
-            eb use eactnd-contacts-server-dev
+            eb use reactnd-contacts-server-dev
       - run:
           name: Backend deploy
           command: |
-            eb deploy eactnd-contacts-server-dev
+            eb deploy reactnd-contacts-server-dev
       - run:
           name: Frontend deploy
           command: |
