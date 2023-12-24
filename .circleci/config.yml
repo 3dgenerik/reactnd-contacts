@@ -39,9 +39,13 @@ jobs:
           command: |
             npm run backend:zip
       - run:
+          name: Use env
+          command: |
+            eb use eactnd-contacts-server-dev
+      - run:
           name: Backend deploy
           command: |
-            eb deploy
+            eb deploy eactnd-contacts-server-dev
       - run:
           name: Frontend deploy
           command: |
