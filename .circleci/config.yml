@@ -12,9 +12,6 @@ jobs:
       - checkout
       - aws-cli/setup
       - run:
-          name: Install p7zip
-          command: sudo apt-get update && sudo apt-get install -y p7zip
-      - run:
           name: Frontend install
           command: |
             npm run frontend:install
@@ -27,9 +24,9 @@ jobs:
           command: |
             npm run frontend:build
       - run:
-          name: Backend zip
+          name: Backend build and zip
           command: |
-            npm run backend:zip           
+            npm run backend:zip        
       - run:
           name: Frontend deploy
           command: |
