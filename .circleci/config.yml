@@ -26,7 +26,11 @@ jobs:
       - run:
           name: Backend build and zip
           command: |
-            npm run backend:zip        
+            npm run backend:zip
+      - run:
+          name: Backend deploy
+          command: |
+            npm run backend:deploy      
       - run:
           name: Frontend deploy
           command: |
