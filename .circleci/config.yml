@@ -3,18 +3,7 @@ orbs:
   node: circleci/node@4.1.0
   # eb: circleci/aws-elastic-beanstalk@2.0.1
   aws-cli: circleci/aws-cli@4.1.2
-  
-commands:
-    install-ebcli:
-        description: "Install EB CLI"
-        steps:
-            - run:
-                name: Install pip3 and ebcli
-                command: |
-                    sudo apt-get update
-                    sudo apt-get upgrade
-                    sudo apt-get install python3-pip
-                    pip3 install awsebcli==3.20.3
+
 jobs:
   build:
     docker:
@@ -23,6 +12,13 @@ jobs:
       - node/install
       - checkout
       - aws-cli/setup
+      - run:
+          name: Install pip3 and ebcli
+          command: |
+              sudo apt-get update
+              sudo apt-get upgrade
+              sudo apt-get install python3-pip
+              pip3 install awsebcli==3.20.3
       - run:
           name: Frontend install
           command: |
