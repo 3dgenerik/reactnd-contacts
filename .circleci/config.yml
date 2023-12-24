@@ -21,7 +21,7 @@ jobs:
       - run:
           name: EB init
           command: |
-            eb init --region eu-east-1 --platform nodejs
+            eb init --region us-east-1 --platform nodejs
       - run:
           name: Frontend install
           command: |
