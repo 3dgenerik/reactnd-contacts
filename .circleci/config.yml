@@ -41,7 +41,7 @@ jobs:
       - run:
           name: Backend deploy
           command: |
-            eb deploy reactnd-contacts-server-dev
+            eb deploy reactnd-contacts-server
       - run:
           name: Frontend deploy
           command: |
